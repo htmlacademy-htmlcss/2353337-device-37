@@ -413,6 +413,63 @@
         </svg>
       </a>
     </footer>
+
+    <!--  Модальное окно  -->
+    <div class="modal-overlay">
+      <div class="modal modal-container">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть окно заказа.</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Доставка под заказ.</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" name="modal-search" method="post">
+            <fieldset class="username-group">
+              <label class="username-label" for="username">
+                Ваше имя:
+              </label>
+              <input class="username-field" type="text" id="username" name="username" placeholder="Введите имя"
+                required>
+            </fieldset>
+            <fieldset class="email-group">
+              <label class="email-label" for="modal-email">
+                Ваш e-mail:
+              </label>
+              <input class="modal-email" type="email" id="modal-email" name="modal-email" placeholder="Введите e-mail"
+                value="почта" required>
+              <p class="wrong-email">Забавный у вас адрес.</p>
+            </fieldset>
+            <fieldset class="goods-group">
+              <label class="goods-label" for="goods-order">
+                Что нужно привезти:
+              </label>
+              <input class="goods-field" type="text" id="goods-order" name="goods-order" placeholder="В свободной форме"
+                required>
+            </fieldset>
+            <div class="value-container">
+              <fieldset class="value">
+                <legend class="visually-hidden">Количество товара, который Вы хотите заказать.
+                </legend>
+                <label class="value-label" for="value-goods"> Количество:
+                </label>
+                <div class="buton-container">
+                  <button class="minus-button" type="button">
+                    <span class="visually-hidden">Нажмите, чтобы уменьшить количество.</span>
+                  </button>
+                  <input class="volume-goods" type="number" name="value-goods" id="value-goods" value="1" min="1"
+                    required>
+                  <button class="plus-button" type="button">
+                    <span class="visually-hidden">Нажмите, чтобы увеличить количество.</span>
+                  </button>
+                </div>
+              </fieldset>
+              <button class="modal-button" type="submit">Отправить
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+
   </body>
 
 </html>
