@@ -4,118 +4,157 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/icons/favicon.png"> -->
   </head>
 
   <body>
 
     <!--  Хедер  -->
     <header class="main-header">
-      <a class="logo-link" href="index.html">
+      <a class="logo-link logo-link-header" href="index.html">
         <span class="visually-hidden">Логотип магазина гаджетов Device</span>
-        <svg class="logo-image">
-        </svg>
+        <img class="logo-image" src="/images/logo-black.svg" width="145" height="36" alt="Device">
       </a>
-      <!--  Поиск по сайту  -->
-      <form class="site-search-form" action="https://echo.htmlacademy.ru/" method="get">
-        <label class="visually-hidden" for="search">
-          Ввкдите Ваш запрос
-        </label>
-        <input class="site-search-text" type="search" name="search" id="search" placeholder="Поиск по сайту" required>
-        <!-- Вставить на странице каталога -  value="Текст поиска"  -->
-        <button class="site-search-button" type="submit">Найти</button>
-      </form>
       <nav class="navigation">
-        <!--  Пользовательское меню  -->
-        <ul class="user-menu-list">
-          <li class="user-menu-item">
-            <a class="user-menu-link user-menu-login" href="#">Войти</a>
-            <a class="user-menu-link user-menu-profile" href="#">Коля Петухов</a>
-          </li>
-          <li class="user-menu-item">
-            <a class="user-menu-link user-menu-compare" href="#">Сравнить
-              <span class="number-compare">2</span>
+        <div class="top-line-wrapper">
+          <!--  Поиск по сайту  -->
+          <div class="search-form-wrapper">
+            <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+              <label class="search-form-label" for="search">
+                <span class="visually-hidden">Введите Ваш запрос</span>
+              </label>
+              <!-- <div class="search-wrapper"> -->
+              <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту" required>
+              <!-- Вставить на странице каталога -  value="Текст поиска"  -->
+              <div class="btn-wrapper">
+                <button class="search-button" type="submit">
+                  Найти
+                </button>
+              </div>
+              <!-- </div> -->
+            </form>
+          </div>
+          <!--  Пользовательское меню  -->
+          <ul class="user-menu-list">
+            <li class="user-menu-item user-login-item">
+              <a class="user-menu-link user-login" href="#">
+                Войти
+              </a>
+              <div class="profile-wrapper">
+                <a class="user-menu-link user-login user-profile" href="#">Коля Петухов
+                </a>
+                <button class="user-logout-button user-profile" type="button">Выйти
+                </button>
+              </div>
+            </li>
+            <li class="user-menu-item">
+              <a class="user-menu-link user-compare" href="#">Сравнить
+              </a>
+            </li>
+            <li class="user-menu-item">
+              <a class="user-menu-link user-cart" href="#">
+                <span class="number-cart">2</span>
+                <span class="text-cart">
+                  Корзина
+                </span>
+              </a>
+              <!--  Всплывающая корзина  -->
+              <div class="subcart-container">
+                <ul class="cart-list">
+                  <li class="cart-item">
+                    <a class="cart-product-link" href="#">
+                      <img class="cart-product-img" src="images/product/amateur-selfie-stick-small.jpg" width="39"
+                        height="43" alt="">
+                      <p class="cart-product-name">Любительская селфи-палка</p>
+                    </a>
+                    <button class="cart-delete-button">
+                      <span class="visually-hidden">Удалить товар из корзины</span>
+                    </button>
+                  </li>
+                  <li class="cart-item">
+                    <a class="cart-product-link" href="#">
+                      <img class="cart-product-img" src="images/product/professional-selfie-stick-small.jpg" width="39"
+                        height="43" alt="">
+                      <p class="cart-product-name">Профессиональная селфи-палка</p>
+                    </a>
+                    <button class="cart-delete-button">
+                      <span class="visually-hidden">Удалить товар из корзины</span>
+                    </button>
+                  </li>
+                </ul>
+                <div class="cart-total-wrapper">
+                  <p class="cart-total total-product">
+                    <span class="total-title">Товаров:</span>
+                    <span class="total-volume total-number">2</span>
+                  </p>
+                  <p class="cart-total total-sum">
+                    <span class="total-title">Сумма:</span>
+                    <span class="total-volume total-sum">2000 ₽</span>
+                  </p>
+                </div>
+                <div class="open-cart-wrapper">
+                  <a class="open-cart-button" href="#">
+                    <span class="open-cart-text">
+                      Открыть корзину
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom-line-wrapper">
+          <div class="catalog-wrapper">
+            <a class="catalog-link" href="">
+              <span class="catalog-link-wrapper">
+                Каталог товаров
+              </span>
             </a>
-          </li>
-          <li class="user-menu-item">
-            <a class="user-menu-link user-menu-cart" href="#">Корзина</a>
-            <div class="cart-submenu-container">
-              <ul class="cart-list">
-                <li class="cart-item">
-                  <a class="cart-product-link" href="#">
-                    <img class="cart-product-img" src="#" alt="Описание картинки.">
-                    <p class="cart-product-name">Любительская селфи-палка</p>
-                  </a>
-                  <button class="prodact-delete-button">
-                    <span class="visually-hidden">Удалить товар из корзины</span>
-                  </button>
-                </li>
-                <li class="cart-item">
-                  <a class="cart-product-link" href="#">
-                    <img class="cart-product-img" src="#" alt="Описание картинки.">
-                    <p class="cart-product-name">Профессиональная селфи-палка</p>
-                  </a>
-                  <button class="prodact-delete-button">
-                    <span class="visually-hidden">Удалить товар из корзины</span>
-                  </button>
-                </li>
-              </ul>
-              <p class="cart-total total-product">
-                <span class="total-title">Товаров:</span>
-                <span class="total-volume total-number">2</span>
-              </p>
-              <p class="cart-total total-sum">
-                <span class="total-title">Сумма:</span>
-                <span class="total-volume total-sum">2000 ₽</span>
-              </p>
-              <a class="open-cart-button" href="#">Открыть корзину</a>
-            </div>
-          </li>
-        </ul>
-        <!--  Навигация сайта   -->
-        <ul class="navigastion-list">
-          <li class="navigastion-item">
-            <a class="navigastion-link navigastion-catalog-link" href="#submenu">Каталог товаров</a>
-            <!--  Выпадающим подменю каталога  -->
-            <div class="catalog-submenu-wrapper" id="submenu">
+            <!--  Выпадающий каталог  -->
+            <div class="subcatalog-wrapper">
               <h3 class="visually-hidden">Виртуальная ресльность и фото/видео.</h3>
-              <ul class="submenu-list">
-                <li class="submenu-item">
-                  <a href="#" class="submenu-item-link">Виртуальная реальность</a>
+              <ul class="subcatalog-list">
+                <li class="subcatalog-item">
+                  <a href="#" class="subcatalog-item-link">Виртуальная реальность</a>
                 </li>
-                <li class="submenu-item">
-                  <a href="catalog.html" class="submenu-item-link">Моноподы для cелфи</a>
+                <li class="subcatalog-item">
+                  <a href="catalog.html" class="subcatalog-item-link">Моноподы для cелфи</a>
                 </li>
-                <li class="submenu-item">
-                  <a href="#" class="submenu-item-link">Экшн-камеры</a>
+                <li class="subcatalog-item">
+                  <a href="#" class="subcatalog-item-link">Экшн-камеры</a>
                 </li>
               </ul>
               <h3 class="visually-hidden">Наручные гаджеты</h3>
-              <ul class="submenu-list">
-                <li class="submenu-item">
-                  <a href="#" class="submenu-item-link">Фитнес-браслеты</a>
+              <ul class="subcatalog-list">
+                <li class="subcatalog-item">
+                  <a href="#" class="subcatalog-item-link">Фитнес-браслеты</a>
                 </li>
-                <li class="submenu-item">
-                  <a href="#" class="submenu-item-link">Умные часы</a>
+                <li class="subcatalog-item">
+                  <a href="#" class="subcatalog-item-link">Умные часы</a>
                 </li>
               </ul>
               <h3 class="visually-hidden">Коптеры</h3>
-              <ul class="submenu-list">
-                <li class="submenu-item">
-                  <a href="#" class="submenu-item-link">Квадрокоптеры</a>
+              <ul class="subcatalog-list">
+                <li class="subcatalog-item">
+                  <a href="#" class="subcatalog-item-link">Квадрокоптеры</a>
                 </li>
               </ul>
             </div>
-          </li>
-          <li class="navigastion-item">
-            <a class="navigastion-link" href="#">Доставка</a>
-          </li>
-          <li class="services-item">
-            <a class="navigastion-link" href="#">Гарантия</a>
-          </li>
-          <li class="services-item">
-            <a class="navigastion-link" href="#">Контакты</a>
-          </li>
-        </ul>
+          </div>
+          <ul class="navigastion-service-list">
+            <li class="services-item">
+              <a class="navigastion-link" href="#">Доставка</a>
+            </li>
+            <li class="services-item">
+              <a class="navigastion-link" href="#">Гарантия</a>
+            </li>
+            <li class="services-item">
+              <a class="navigastion-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -306,7 +345,7 @@
             <li class="card-item">
               <a class="card-link" href="#">
                 <div class="card-img-container">
-                  <img class="card-img" src="images/catalog/amateur-selfie-stick.jpg" width="" height="" alt="">
+                  <img class="card-img" src="images/product/amateur-selfie-stick.jpg" width="360" height="380" alt="">
                 </div>
                 <h3 class="card-product-name">
                   Любительская селфи-палка
@@ -318,7 +357,8 @@
               <a class="card-link new" href="#">
                 <span class="new-product-sticker">NEW</span>
                 <div class="card-img-container">
-                  <img class="card-img" src="images/catalog/professional-selfie-stick.jpg" width="" height="" alt="">
+                  <img class="card-img" src="images/product/professional-selfie-stick.jpg" width="360" height="380"
+                    alt="">
                 </div>
                 <h3 class="card-product-name">
                   Профессиональная селфи-палка
@@ -329,7 +369,8 @@
             <li class="card-item">
               <a class="card-link" href="#">
                 <div class="card-img-container">
-                  <img class="card-img" src="images/catalog/unsinkable-selfie-stick.jpg" width="" height="" alt="">
+                  <img class="card-img" src="images/product/unsinkable-selfie-stick.jpg" width="360" height="380"
+                    alt="">
                 </div>
                 <h3 class="card-product-name">
                   Непотопляемая селфи-палка
@@ -340,10 +381,12 @@
             <li class="card-item">
               <a class="card-link" href="#">
                 <div class="card-img-container">
-                  <img class="card-img" src="images/catalog/selfie-stick-follow-me.jpg" width="" height="" alt="">
+                  <img class="card-img" src="images/product/selfie-selfie-stick.jpg" width="360" height="380" alt="">
                 </div>
-                <h3 class="card-product-name">Селфи-палка «Следуй за мной»</h3>
-                <p class="card-product-price">1 500 ₽</p>
+                <h3 class="card-product-name">
+                  Непотопляемая селфи-палка
+                </h3>
+                <p class="card-product-price">2 500 ₽</p>
               </a>
             </li>
           </ul>
