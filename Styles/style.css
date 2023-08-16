@@ -1473,8 +1473,206 @@ body {
 .subscribe-button:active + .subscribe-email:invalid {
   border-color: #ff3d3d;
   /* не работает */
+}
+
+/*  Каталог - страница  */
+.header-inner {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.header-wrapper {
+  width: 1080px;
+  padding: 35px 60px;
+}
+
+.catalog-title {
+  margin-top: 0;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 50px;
+}
+
+.breadcrumbs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 32px;
 
 }
+
+.breadcrumbs-item {
+  position: relative;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000000;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: "";
+  background-image: url(../images/icons/bread-arrow.svg);
+  right: -17px;
+  top: 12px;
+  width: 4px;
+  height: 7px;
+  background-repeat: no-repeat;
+  position: absolute;
+  opacity: 0.3;
+}
+
+.header-inner ~ .max-wide-wrapper {
+  background-color: #f0f0f0;
+}
+
+.filter-cards-wrapper {
+  width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  padding-left: 60px;
+}
+
+.filter-cards-wrapper ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.filter-title,
+.sorting-title {
+  margin: 0;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+}
+
+.filter-title {
+  padding: 25px 0;
+}
+
+/*  Сщзтирока - Карточки товара - Пагинация  */
+.cards {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.sorting-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 20px 40px;
+}
+
+.select-control {
+  border: none;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  background-color: transparent;
+}
+
+.sorting-control-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.cards-wrapper {
+  width: 840px;
+  padding: 70px 40px 0;
+}
+
+.cards-list {
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  gap: 40px;
+  justify-content: space-evenly;
+}
+
+.card-item {
+  position: relative;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card-img {
+  display: block;
+}
+
+.card-img-container {
+  margin-bottom: 32px;
+}
+
+.new-text-sticker {
+  color: rgba(0, 0, 0, 0.60);
+  text-align: center;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 27px;
+  right: 27px;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(0, 0, 0, 0.60);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-text-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-product-name {
+  margin: 0;
+  width: 220px;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+  color: #000000;
+}
+
+.card-product-price {
+  margin: 0;
+  text-align: right;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #444444;
+}
+
+
+
+
 
 /*   Подвал  */
 .footer-wide-wrapper {
