@@ -66,7 +66,7 @@ body {
   padding-top: 94px;
   padding-bottom: 11px;
   position: relative;
-  z-index: -1;
+  z-index: 2;
 }
 
 .main-header::before {
@@ -184,7 +184,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  background-image: url("/images/icons/search.svg");
+  background-image: url("../images/icons/search.svg");
   background-repeat: no-repeat;
   background-position: 16px 12px;
   z-index: 1;
@@ -293,7 +293,7 @@ body {
 
 .user-login {
   width: auto;
-  background-image: url("/images/icons/user.svg");
+  background-image: url("../images/icons/user.svg");
   background-repeat: no-repeat;
   background-position: 13px 13px;
   text-align: left;
@@ -321,7 +321,7 @@ body {
 
 .user-compare {
   width: 110px;
-  background-image: url("/images/icons/compare.svg");
+  background-image: url("../images/icons/compare.svg");
   background-repeat: no-repeat;
   background-position: 5px 13px;
 }
@@ -350,7 +350,7 @@ body {
 }
 
 .text-cart {
-  background-image: url("/images/icons/cart.svg");
+  background-image: url("../images/icons/cart.svg");
   background-repeat: no-repeat;
   background-position: 5px 6px;
   width: 105px;
@@ -384,7 +384,7 @@ body {
 }
 
 .subcart-container::before {
-  content: url("/images/icons/trangale-for-subcart.svg");
+  content: url("../images/icons/trangale-for-subcart.svg");
   position: absolute;
   top: -20px;
   left: 50%;
@@ -578,10 +578,11 @@ body {
 
 .catalog-wrapper {
   width: 300px;
+  position: relative;
 }
 
 .catalog-link {
-  margin-bottom: 27px;
+  /* margin-bottom: 27px; */
   position: relative;
 }
 
@@ -594,7 +595,7 @@ body {
 
 .catalog-link-wrapper::before {
   content: "";
-  background-image: url("/images/icons/plus-catalog.svg");
+  background-image: url("../images/icons/plus-catalog.svg");
   background-repeat: no-repeat;
   position: absolute;
   width: 50px;
@@ -616,13 +617,17 @@ body {
 /*  Выпадающий каталог  */
 .subcatalog-wrapper {
   /*  по активности менять на grid  */
-  width: 1040px;
+  width: 1160px;
   grid-template-columns: 252px 211px 211px auto;
   row-gap: 50px;
   display: none;
+  position: absolute;
+  left: -60px;
+  top: 100%;
+  background-color: red;
 }
 
-.catalog-link:hover .subcatalog-wrapper {
+.catalog-wrapper:hover .subcatalog-wrapper {
   display: grid;
 }
 
@@ -682,6 +687,7 @@ body {
   padding-top: 66px;
   top: 0;
   padding-bottom: 19px;
+  /* z-index: 10; */
 }
 
 .slider ul,
@@ -725,7 +731,7 @@ body {
 
 .slider-img {
   display: block;
-  margin-top: -120px;
+  /* margin-top: -120px; */
 }
 
 .slider-description p {
@@ -844,7 +850,7 @@ body {
 
 .slider-left-button::before {
   content: "";
-  background-image: url("/images/icons/slider-arrow-left.svg");
+  background-image: url("../images/icons/slider-arrow-left.svg");
   width: 20px;
   height: 60px;
   position: absolute;
@@ -854,7 +860,7 @@ body {
 
 .slider-right-button::after {
   content: "";
-  background-image: url("/images/icons/slider-arrow-right.svg");
+  background-image: url("../images/icons/slider-arrow-right.svg");
   width: 20px;
   height: 60px;
   position: absolute;
@@ -977,32 +983,32 @@ body {
 }
 
 .product-virtual {
-  background-image: url("/images/icons/decor-virtual-reality.svg");
+  background-image: url("../images/icons/decor-virtual-reality.svg");
   background-repeat: no-repeat;
 }
 
 .product-monopads {
-  background-image: url("/images/icons/decor-monopad.svg");
+  background-image: url("../images/icons/decor-monopad.svg");
   background-repeat: no-repeat;
 }
 
 .product-cameras {
-  background-image: url("/images/icons/decor-camers.svg");
+  background-image: url("../images/icons/decor-camers.svg");
   background-repeat: no-repeat;
 }
 
 .product-bracelets {
-  background-image: url("/images/icons/decor-braslets.svg");
+  background-image: url("../images/icons/decor-braslets.svg");
   background-repeat: no-repeat;
 }
 
 .product-watchs {
-  background-image: url("/images/icons/decor-watch.svg");
+  background-image: url("../images/icons/decor-watch.svg");
   background-repeat: no-repeat;
 }
 
 .product-quadrocopters {
-  background-image: url("/images/icons/decor-quadrocopters.svg");
+  background-image: url("../images/icons/decor-quadrocopters.svg");
   background-repeat: no-repeat;
 }
 
@@ -1142,7 +1148,7 @@ body {
 }
 
 .services-slider-delivery::after {
-  content: url("/images/icons/servis-delivery.svg");
+  content: url("../images/icons/servis-delivery.svg");
   width: 136px;
   position: absolute;
   top: 4px;
@@ -1167,7 +1173,7 @@ body {
 }
 
 .services-slider-warranty:after {
-  content: url("/images/icons/servis-warranty.svg");
+  content: url("../images/icons/servis-warranty.svg");
   width: 136px;
   position: absolute;
   top: -9px;
@@ -1175,7 +1181,7 @@ body {
 }
 
 .services-slider-credit:after {
-  content: url("/images/icons/servis-credit.svg");
+  content: url("../images/icons/servis-credit.svg");
   width: 136px;
   position: absolute;
   top: -7px;
@@ -1200,7 +1206,7 @@ body {
   justify-content: center;
   align-items: center;
   background:
-    url("/images/icons/i&elipse.svg"),
+    url("../images/icons/i&elipse.svg"),
     #f0f0f0;
   background-position:
     right 35px center,
@@ -1210,7 +1216,7 @@ body {
 }
 
 .delivery-rare-button::before {
-  content: url(/images/icons/car.svg);
+  content: url(../images/icons/car.svg);
   background: #ffe17f;
   position: absolute;
   width: 125px;
@@ -1442,7 +1448,7 @@ body {
 .subscribe-form-wrapper .subscribe-text {
   width: 160px;
   align-self: center;
-  background: url("/images/icons/check-marrk-green.svg") left center/16px no-repeat;
+  background: url("../images/icons/check-marrk-green.svg") left center/16px no-repeat;
   padding-left: 32px;
 }
 
