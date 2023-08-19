@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/style.css">
-    <!-- <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="images/icons/favicon.png"> -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/icons/favicon.png">
   </head>
 
   <body>
@@ -22,32 +22,25 @@
           <!--  Поиск по сайту  -->
           <div class="search-form-wrapper">
             <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+              <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту"
+                value="Текст поиска" required>
               <label class="search-form-label" for="search">
                 <span class="visually-hidden">Введите Ваш запрос</span>
               </label>
-              <!-- <div class="search-wrapper"> -->
-              <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту" required>
-              <!-- Вставить на странице каталога -  value="Текст поиска"  -->
               <div class="btn-wrapper">
                 <button class="search-button" type="submit">
                   Найти
                 </button>
               </div>
-              <!-- </div> -->
             </form>
           </div>
           <!--  Пользовательское меню  -->
           <ul class="user-menu-list">
             <li class="user-menu-item user-login-item">
-              <a class="user-menu-link user-login" href="#">
-                Войти
+              <a class="user-menu-link user-login user-profile" href="#">Коля Петухов
               </a>
-              <div class="profile-wrapper">
-                <a class="user-menu-link user-login user-profile" href="#">Коля Петухов
-                </a>
-                <button class="user-logout-button user-profile" type="button">Выйти
-                </button>
-              </div>
+              <button class="user-logout-button user-profile" type="button">Выйти
+              </button>
             </li>
             <li class="user-menu-item">
               <a class="user-menu-link user-compare" href="#">Сравнить

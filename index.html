@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/style.css">
-    <!-- <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="images/icons/favicon.png"> -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/icons/favicon.png">
   </head>
 
   <body>
@@ -21,41 +21,28 @@
       <nav class="navigation">
         <div class="top-line-wrapper">
           <!--  Поиск по сайту  -->
-          <div class="search-form-wrapper">
-            <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-
-              <!-- <div class="search-wrapper"> -->
-              <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту" required>
-              <label class="search-form-label" for="search">
-                <span class="visually-hidden">Введите Ваш запрос</span>
-              </label>
-              <!-- Вставить на странице каталога -  value="Текст поиска"  -->
-              <div class="btn-wrapper">
-                <button class="search-button" type="submit">
-                  Найти
-                </button>
-              </div>
-              <!-- </div> -->
-            </form>
-          </div>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+            <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту" required>
+            <label class="search-form-label" for="search">
+              <span class="visually-hidden">Введите Ваш запрос</span>
+            </label>
+            <button class="search-button" type="submit">
+              Найти
+            </button>
+          </form>
           <!--  Пользовательское меню  -->
           <ul class="user-menu-list">
             <li class="user-menu-item user-login-item">
               <a class="user-menu-link user-login" href="#">
                 Войти
               </a>
-              <div class="profile-wrapper">
-                <a class="user-menu-link user-login user-profile" href="#">Коля Петухов
-                </a>
-                <button class="user-logout-button user-profile" type="button">Выйти
-                </button>
-              </div>
+
             </li>
             <li class="user-menu-item">
               <a class="user-menu-link user-compare" href="#">Сравнить
               </a>
             </li>
-            <li class="user-menu-item">
+            <li class="user-menu-item user-cart-item">
               <a class="user-menu-link user-cart" href="#">
                 <span class="number-cart">2</span>
                 <span class="text-cart">
@@ -109,45 +96,49 @@
         </div>
         <div class="bottom-line-wrapper">
           <div class="catalog-wrapper">
-            <a class="catalog-link" href="">
-              <span class="catalog-link-wrapper">
-                Каталог товаров
-              </span>
+            <a class="catalog-link" href="#">
+              Каталог товаров
             </a>
             <!--  Выпадающий каталог  -->
             <div class="subcatalog-wrapper">
               <h3 class="visually-hidden">Виртуальная ресльность и фото/видео.</h3>
               <ul class="subcatalog-list">
                 <li class="subcatalog-item">
-                  <a href="#" class="subcatalog-item-link">Виртуальная реальность</a>
+                  <a class="subcatalog-item-link" href="#">
+                    Виртуальная реальность</a>
                 </li>
                 <li class="subcatalog-item">
-                  <a href="catalog.html" class="subcatalog-item-link">Моноподы для cелфи</a>
+                  <a class="subcatalog-item-link" href="catalog.html">
+                    Моноподы для cелфи</a>
                 </li>
                 <li class="subcatalog-item">
-                  <a href="#" class="subcatalog-item-link">Экшн-камеры</a>
+                  <a class="subcatalog-item-link" href="#">
+                    Экшн-камеры</a>
                 </li>
               </ul>
               <h3 class="visually-hidden">Наручные гаджеты</h3>
               <ul class="subcatalog-list">
                 <li class="subcatalog-item">
-                  <a href="#" class="subcatalog-item-link">Фитнес-браслеты</a>
+                  <a class="subcatalog-item-link" href="#">
+                    Фитнес-браслеты</a>
                 </li>
                 <li class="subcatalog-item">
-                  <a href="#" class="subcatalog-item-link">Умные часы</a>
+                  <a class="subcatalog-item-link" href="#">
+                    Умные часы</a>
                 </li>
               </ul>
               <h3 class="visually-hidden">Коптеры</h3>
               <ul class="subcatalog-list">
                 <li class="subcatalog-item">
-                  <a href="#" class="subcatalog-item-link">Квадрокоптеры</a>
+                  <a class="subcatalog-item-link" href="#">
+                    Квадрокоптеры</a>
                 </li>
               </ul>
             </div>
           </div>
           <ul class="navigastion-service-list">
             <li class="services-item">
-              <a class="navigastion-link" href="#">Доставка</a>
+              <a class="navigastion-link navigastion-active-link" href="#">Доставка</a>
             </li>
             <li class="services-item">
               <a class="navigastion-link" href="#">Гарантия</a>
@@ -166,14 +157,12 @@
       <section class="slider">
         <h2 class="visually-hidden">Слайдер с кратким описанием уникальных гаджетов</h2>
         <!-- <div class="slider-wrapper"> -->
-        <ul class="slider-list">
+        <ol class="slider-list">
           <!--  Слайд 1  -->
           <li class="slider-item slider-item-active slider-item-1">
             <span class="slider-number">01</span>
-            <div class="slider-img-wrapper">
-              <img class="slider-img slider-img-01" src="./images/slider-1.png" width="560" height="560"
-                alt="Модель квадроклптера,с красным лазерным лучом">
-            </div>
+            <img class="slider-img slider-img-01" src="./images/slider-1.png" width="560" height="560"
+              alt="Модель квадроклптера,с красным лазерным лучом">
             <div class="slider-description">
               <p class="slider-slogan title-like">Порхает как бабочка, жалит как пчела!</p>
               <p class="slider-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
@@ -248,7 +237,7 @@
             </div>
           </li>
 
-        </ul>
+        </ol>
         <!--  Управление слайдером  -->
         <!--  Кнопки  -->
         <button class="slider-control slider-left-button" type="button">
@@ -261,17 +250,17 @@
         <ol class="slider-pagination">
           <li class="slider-pagination-item">
             <button class="slider-pagination-button slider-pagination-current" type="button">
-              <span class="visually-hidden">1 фото</span>
+              <span class="visually-hidden">Первое фото</span>
             </button>
           </li>
           <li class="slider-pagination-item">
             <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">2 фото</span>
+              <span class="visually-hidden">Второе фото</span>
             </button>
           </li>
           <li class="slider-pagination-item">
             <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">3 фото</span>
+              <span class="visually-hidden">Третье фото</span>
             </button>
           </li>
         </ol>
@@ -308,7 +297,7 @@
         <div class="services-wrapper">
           <ul class="for-slider-list">
             <li class="for-slider-item for-slider-current">
-              <a class="for-slider-link services-delivery-link" href="#">Доставка</a>
+              <a class="for-slider-link services-current-link services-delivery-link" href="#">Доставка</a>
             </li>
             <li class="for-slider-item">
               <a class="for-slider-link services-warranty-link" href="#">Гарантия</a>
@@ -349,15 +338,17 @@
               </li>
             </ul>
           </div>
-          <div class="delivery-rare-wraapper">
-            <a class="delivery-rare-button" href="#">
-              <span class="rare-text">
-                Доставим редкий товар под заказ
-              </span>
-            </a>
-          </div>
         </div>
       </section>
+      <div class="max-wide-wrapper delivery-rare-wraapper">
+        <section class="rare-goods">
+          <a class="delivery-rare-button" href="#">
+            <span class="rare-text">
+              Доставим редкий товар под заказ
+            </span>
+          </a>
+        </section>
+      </div>
 
       <div class="about-contacts-wrapper">
         <!--  О нас  -->
@@ -393,7 +384,9 @@
             <address class="contacts-address">
               Санкт-Петербург, набережная реки Карповки, 5, литера П.
             </address>
-            <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            <div class="phone-wrapper">
+              <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            </div>
           </div>
           <h3 class="contacts-subtitle">Время работы»</h3>
           <ul class="contacts-schedule-list">
@@ -461,66 +454,20 @@
           <ul class="social-list">
             <!--  Телеграмм -->
             <li class="social-item">
-              <a class="social-link" href="https://t.me/htmlacademy">
+              <a class="social-link telegramm-link" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Telegram.</span>
-                <div class="social-wrapper">
-                  <svg class="social-icon" aria-hidden="true" focusable="false" width="14" height="12"
-                    viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_19415_1282)">
-                      <path
-                        d="M12.4431 0.0735832L0.623071 4.63158C-0.183596 4.95558 -0.178929 5.40558 0.475071 5.60625L3.50974 6.55292L10.5311 2.12292C10.8631 1.92092 11.1664 2.02958 10.9171 2.25092L5.2284 7.38492H5.22707L5.2284 7.38558L5.01907 10.5136C5.32574 10.5136 5.46107 10.3729 5.63307 10.2069L7.10707 8.77358L10.1731 11.0382C10.7384 11.3496 11.1444 11.1896 11.2851 10.5149L13.2977 1.02958C13.5037 0.203583 12.9824 -0.170417 12.4431 0.0735832Z"
-                        fill="black" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_19415_1282">
-                        <rect width="14" height="12" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
-
               </a>
             </li>
             <!--  Ютуб -->
             <li class="social-item">
-              <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="social-link youtube-link" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Youtube.</span>
-                <div class="social-wrapper">
-                  <svg class="social-icon" aria-hidden="true" focusable="false" width="16" height="11"
-                    viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_19415_1259)">
-                      <path
-                        d="M15.6671 1.67464C15.5765 1.35146 15.4 1.05887 15.1564 0.827973C14.9059 0.589975 14.5989 0.41973 14.2644 0.333306C13.0124 0.00330585 7.99641 0.00330593 7.99641 0.00330593C5.9053 -0.0204856 3.8147 0.0841556 1.73641 0.316639C1.40187 0.409448 1.09545 0.583497 0.844411 0.823306C0.597745 1.06064 0.419078 1.35331 0.325745 1.67397C0.10154 2.8818 -0.00739387 4.1082 0.000411455 5.33664C-0.00758854 6.56397 0.101078 7.78997 0.325745 8.99931C0.417078 9.31864 0.595078 9.60997 0.842411 9.84531C1.08974 10.0806 1.39774 10.2506 1.73641 10.3406C3.00508 10.67 7.99641 10.67 7.99641 10.67C10.0902 10.6938 12.1835 10.5892 14.2644 10.3566C14.5989 10.2702 14.9059 10.1 15.1564 9.86197C15.3999 9.63112 15.5762 9.33849 15.6664 9.01531C15.8965 7.80794 16.0083 6.58103 16.0004 5.35197C16.0177 4.11771 15.906 2.88502 15.6671 1.67397V1.67464ZM6.40174 7.61931V3.05464L10.5751 5.33731L6.40174 7.61931Z"
-                        fill="black" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_19415_1259">
-                        <rect width="16" height="11" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
               </a>
             </li>
             <!--  Твиттер -->
             <li class="social-item">
-              <a class="social-link" href="https://twitter.com/htmlacademy_ru">
+              <a class="social-link twitter-link" href="https://twitter.com/htmlacademy_ru">
                 <span class="visually-hidden">Twitter.</span>
-                <div class="social-wrapper">
-                  <svg class="social-icon" aria-hidden="true" focusable="false" width="16" height="14"
-                    viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_11534_7054)">
-                      <path
-                        d="M10.3467 0.154515C11.9467 -0.34346 13.12 0.4533 13.76 1.25006C14.2933 1.05087 14.9333 0.85168 15.5733 0.65249C15.5733 1.44925 15.04 2.04682 14.72 2.24601C15.4667 2.4452 16 1.84763 16 1.84763C15.8933 2.74398 15.04 3.54074 14.5067 3.73993C14.2933 10.0144 11.52 14.0978 5.01333 13.9982C4.48 13.9982 5.12 13.9982 4.58667 13.9982C4.26667 13.9982 0.64 13.5998 0 12.2055C2.13333 12.4047 3.62667 11.8071 4.37333 11.11C3.52 10.8112 1.81333 10.7116 1.6 8.3213C1.92 8.52049 2.13333 8.62009 2.77333 8.52049C1.6 7.72373 0.32 7.02657 0.426667 5.03467C0.746667 5.33345 1.38667 5.53264 1.70667 5.43305C1.06667 5.23386 -0.213333 2.3456 0.853333 0.85168C2.56 2.54479 4.37333 4.23791 7.57333 4.3375C7.78667 2.24601 8.64 0.85168 10.3467 0.154515Z"
-                        fill="black" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_11534_7054">
-                        <rect width="16" height="14" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
               </a>
             </li>
           </ul>
