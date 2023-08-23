@@ -20,20 +20,15 @@
       <nav class="navigation">
         <div class="top-line-wrapper">
           <!--  Поиск по сайту  -->
-          <div class="search-form-wrapper">
-            <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-              <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту"
-                value="Текст поиска" required>
-              <label class="search-form-label" for="search">
-                <span class="visually-hidden">Введите Ваш запрос</span>
-              </label>
-              <div class="btn-wrapper">
-                <button class="search-button" type="submit">
-                  Найти
-                </button>
-              </div>
-            </form>
-          </div>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+            <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту" required>
+            <label class="search-form-label" for="search">
+              <span class="visually-hidden">Введите Ваш запрос</span>
+            </label>
+            <button class="search-button" type="submit">
+              Найти
+            </button>
+          </form>
           <!--  Пользовательское меню  -->
           <ul class="user-menu-list">
             <li class="user-menu-item user-login-item">
@@ -101,37 +96,41 @@
         <div class="bottom-line-wrapper">
           <div class="catalog-wrapper">
             <a class="catalog-link" href="">
-              <span class="catalog-link-wrapper">
-                Каталог товаров
-              </span>
+              Каталог товаров
             </a>
             <!--  Выпадающий каталог  -->
             <div class="subcatalog-wrapper">
               <h3 class="visually-hidden">Виртуальная ресльность и фото/видео.</h3>
               <ul class="subcatalog-list">
                 <li class="subcatalog-item">
-                  <a href="#" class="subcatalog-item-link">Виртуальная реальность</a>
+                  <a class="subcatalog-item-link" href="#">
+                    Виртуальная реальность</a>
                 </li>
                 <li class="subcatalog-item">
-                  <a href="catalog.html" class="subcatalog-item-link">Моноподы для cелфи</a>
+                  <a class="subcatalog-item-link" href="catalog.html">
+                    Моноподы для cелфи</a>
                 </li>
                 <li class="subcatalog-item">
-                  <a href="#" class="subcatalog-item-link">Экшн-камеры</a>
+                  <a class="subcatalog-item-link" href="#">
+                    Экшн-камеры</a>
                 </li>
               </ul>
               <h3 class="visually-hidden">Наручные гаджеты</h3>
               <ul class="subcatalog-list">
                 <li class="subcatalog-item">
-                  <a href="#" class="subcatalog-item-link">Фитнес-браслеты</a>
+                  <a class="subcatalog-item-link" href="#">
+                    Фитнес-браслеты</a>
                 </li>
                 <li class="subcatalog-item">
-                  <a href="#" class="subcatalog-item-link">Умные часы</a>
+                  <a class="subcatalog-item-link" href="#">
+                    Умные часы</a>
                 </li>
               </ul>
               <h3 class="visually-hidden">Коптеры</h3>
               <ul class="subcatalog-list">
                 <li class="subcatalog-item">
-                  <a href="#" class="subcatalog-item-link">Квадрокоптеры</a>
+                  <a class="subcatalog-item-link" href="#">
+                    Квадрокоптеры</a>
                 </li>
               </ul>
             </div>
@@ -180,11 +179,11 @@
           <!-- Фильтры  -->
           <section class="filter">
             <h2 class="filter-title">Фильтр:</h2>
-            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <form class="catalog-filters-form" action="https://echo.htmlacademy.ru/" method="get">
               <div class="filter-container">
                 <!--  Range-слайдер - цена   -->
-                <fieldset class="catalog-filter-group">
-                  <legend class="visually-hidden">Стоимость в рублях:</legend>
+                <div class="catalog-filter-group">
+                  <legend class="catalog-filter-title cost-title">Стоимость</legend>
                   <div class="range">
                     <div class="range-scale">
                       <div class="range-bar">
@@ -196,32 +195,32 @@
                         </button>
                       </div>
                     </div>
-                    <div class="filter-price-container">
-                      <label class="visually-hidden" for="price-from">от
+                    <div class="range-wrapper-inputs">
+                      <label class="visually-hidden" for="price-from">
                         <span class="visually-hidden">
-                          Указать минимальную стоимость, от скольки.
+                          Укажите минимальную стоимость, от скольки.
                         </span>
                       </label>
-                      <div class="input-price-container">
-                        <input class="price-input price-input-from" type="number" name="price-from" id="price-from"
-                          min="0" placeholder="0">
+                      <div class="input-range-container">
+                        <input class="range-input range-input-from" type="number" name="price-from" id="price-from"
+                          min="0" placeholder="от 0" value="">
                       </div>
-                      <label class="visually-hidden" for="price-till">до
+                      <label class="visually-hidden" for="price-till">
                         <span class="visually-hidden">
-                          Указать максимальную стоимость, до скольки
+                          Указажите максимальную стоимость, до скольки
                         </span>
                       </label>
-                      <div class="input-price-container">
-                        <input class="price-input price-input-till" type="number" name="price-till" id="price-till"
-                          max="9000" placeholder="5000">
+                      <div class="input-range-container">
+                        <input class="range-input range-input-till" type="number" name="price-till" id="price-till"
+                          max="9000" placeholder="до 5000" value="">
                       </div>
                     </div>
                   </div>
-                </fieldset>
+                </div>
                 <!--  Фильтр по цвету. Чекбокс  -->
                 <div class="filter-container">
-                  <fieldset class="catalog-filter-group">
-                    <legend class="catalog-filter-title">Цвет</legend>
+                  <div class="catalog-filter-group">
+                    <legend class="catalog-filter-title color-title">Цвет</legend>
                     <ul class="catalog-filter-list">
                       <li class="catalog-filter-item filter-item-color">
                         <label class="control">
@@ -259,18 +258,18 @@
                         </label>
                       </li>
                     </ul>
-                  </fieldset>
-                  <fieldset class="catalog-filter-group">
-                    <legend class="catalog-filter-title filter-title-2">Bluetooth</legend>
+                  </div>
+                  <div class="catalog-filter-group">
+                    <legend class="catalog-filter-title radio-title">Bluetooth</legend>
                     <ul class="catalog-filter-list">
-                      <li class="catalog-filter-item filter-item-2">
+                      <li class="catalog-filter-item filter-item-radio">
                         <label class="control">
                           <input class="visually-hidden control-input" type="radio" name="yes" checked>
                           <span class="control-mark"></span>
                           <span class="control-label">Есть</span>
                         </label>
                       </li>
-                      <li class="catalog-filter-item filter-item-2">
+                      <li class="catalog-filter-item filter-item-radio">
                         <label class="control">
                           <input class="visually-hidden control-input" type="radio" name="no">
                           <span class="control-mark"></span>
@@ -278,11 +277,11 @@
                         </label>
                       </li>
                     </ul>
-                  </fieldset>
+                  </div>
                 </div>
 
                 <div class="button-filter-container">
-                  <button class="button-filter button-find-show" type="button">Показать</button>
+                  <button class="btn-more button-find-show" type="button">Показать</button>
                 </div>
               </div>
             </form>
@@ -406,31 +405,31 @@
                 <ul class="pagination-list">
                   <li class="pagination-item">
                     <span class="visually-hidden">Перейти</span>
-                    <a class="pagination-link pagination-current">Назад</a>
+                    <a class="pagination-link pagination-text pagination-current">Назад</a>
                   </li>
                   <li class="pagination-item">
                     <span class="visually-hidden">Перейти на страницу:</span>
-                    <a class="pagination-link" href="#">1</a>
+                    <a class="pagination-link pagination-number" href="#">1</a>
                   </li>
                   <li class="pagination-item">
                     <span class="visually-hidden">Перейти на страницу:</span>
-                    <a class="pagination-link" href="#">2</a>
+                    <a class="pagination-link pagination-number" href="#">2</a>
                   </li>
                   <li class="pagination-item">
                     <span class="visually-hidden">Перейти на страницу:</span>
-                    <a class="pagination-link" href="#">3</a>
+                    <a class="pagination-link pagination-number" href="#">3</a>
                   </li>
                   <li class="pagination-item">
                     <span class="visually-hidden">Показать еще страницы с отобранными вариантами</span>
-                    <a class="pagination-link pagination-more" href="#" aria-hidden="true">...</a>
+                    <a class="pagination-link pagination-number pagination-more" href="#" aria-hidden="true">...</a>
                   </li>
                   <li class="pagination-item">
                     <span class="visually-hidden">Перейти на страницу:</span>
-                    <a class="pagination-link" href="#">15</a>
+                    <a class="pagination-link pagination-number" href="#">15</a>
                   </li>
                   <li class="pagination-item">
                     <span class="visually-hidden">Перейти</span>
-                    <a class="pagination-link pagination-current">Вперёд</a>
+                    <a class="pagination-link pagination-text">Вперёд</a>
                   </li>
                 </ul>
               </div>
@@ -443,7 +442,7 @@
     </main>
 
     <!--  Подвал сайта  -->
-    <div class="max-wide-wrapper footer-wide-wrapper">
+    <div class="footer-wide-wrapper">
       <footer class="footer">
         <a class="logo-link-footer" href="https://htmlacademy.ru/">
           <img class="logo-image logo-image-footer" src="./images/logo-yellow.svg" width="145" height="36"
@@ -465,74 +464,28 @@
               <a class="footer-service-link" href="#">Контакты</a>
             </li>
           </ul>
-          <!-- <div class="phone-wrapper"> -->
-          <a class="footer-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
-          <!-- </div> -->
+          <div class="phone-footer-wrapper">
+            <a class="footer-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+          </div>
         </div>
         <div class="footer-bottom-wrapper">
           <ul class="social-list">
             <!--  Телеграмм -->
             <li class="social-item">
-              <a class="social-link" href="https://t.me/htmlacademy">
+              <a class="social-link telegramm-link" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Telegram.</span>
-                <div class="social-wrapper">
-                  <svg class="social-icon" aria-hidden="true" focusable="false" width="14" height="12"
-                    viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_19415_1282)">
-                      <path
-                        d="M12.4431 0.0735832L0.623071 4.63158C-0.183596 4.95558 -0.178929 5.40558 0.475071 5.60625L3.50974 6.55292L10.5311 2.12292C10.8631 1.92092 11.1664 2.02958 10.9171 2.25092L5.2284 7.38492H5.22707L5.2284 7.38558L5.01907 10.5136C5.32574 10.5136 5.46107 10.3729 5.63307 10.2069L7.10707 8.77358L10.1731 11.0382C10.7384 11.3496 11.1444 11.1896 11.2851 10.5149L13.2977 1.02958C13.5037 0.203583 12.9824 -0.170417 12.4431 0.0735832Z"
-                        fill="black" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_19415_1282">
-                        <rect width="14" height="12" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
-
               </a>
             </li>
             <!--  Ютуб -->
             <li class="social-item">
-              <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="social-link youtube-link" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Youtube.</span>
-                <div class="social-wrapper">
-                  <svg class="social-icon" aria-hidden="true" focusable="false" width="16" height="11"
-                    viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_19415_1259)">
-                      <path
-                        d="M15.6671 1.67464C15.5765 1.35146 15.4 1.05887 15.1564 0.827973C14.9059 0.589975 14.5989 0.41973 14.2644 0.333306C13.0124 0.00330585 7.99641 0.00330593 7.99641 0.00330593C5.9053 -0.0204856 3.8147 0.0841556 1.73641 0.316639C1.40187 0.409448 1.09545 0.583497 0.844411 0.823306C0.597745 1.06064 0.419078 1.35331 0.325745 1.67397C0.10154 2.8818 -0.00739387 4.1082 0.000411455 5.33664C-0.00758854 6.56397 0.101078 7.78997 0.325745 8.99931C0.417078 9.31864 0.595078 9.60997 0.842411 9.84531C1.08974 10.0806 1.39774 10.2506 1.73641 10.3406C3.00508 10.67 7.99641 10.67 7.99641 10.67C10.0902 10.6938 12.1835 10.5892 14.2644 10.3566C14.5989 10.2702 14.9059 10.1 15.1564 9.86197C15.3999 9.63112 15.5762 9.33849 15.6664 9.01531C15.8965 7.80794 16.0083 6.58103 16.0004 5.35197C16.0177 4.11771 15.906 2.88502 15.6671 1.67397V1.67464ZM6.40174 7.61931V3.05464L10.5751 5.33731L6.40174 7.61931Z"
-                        fill="black" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_19415_1259">
-                        <rect width="16" height="11" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
               </a>
             </li>
             <!--  Твиттер -->
             <li class="social-item">
-              <a class="social-link" href="https://twitter.com/htmlacademy_ru">
+              <a class="social-link twitter-link" href="https://twitter.com/htmlacademy_ru">
                 <span class="visually-hidden">Twitter.</span>
-                <div class="social-wrapper">
-                  <svg class="social-icon" aria-hidden="true" focusable="false" width="16" height="14"
-                    viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_11534_7054)">
-                      <path
-                        d="M10.3467 0.154515C11.9467 -0.34346 13.12 0.4533 13.76 1.25006C14.2933 1.05087 14.9333 0.85168 15.5733 0.65249C15.5733 1.44925 15.04 2.04682 14.72 2.24601C15.4667 2.4452 16 1.84763 16 1.84763C15.8933 2.74398 15.04 3.54074 14.5067 3.73993C14.2933 10.0144 11.52 14.0978 5.01333 13.9982C4.48 13.9982 5.12 13.9982 4.58667 13.9982C4.26667 13.9982 0.64 13.5998 0 12.2055C2.13333 12.4047 3.62667 11.8071 4.37333 11.11C3.52 10.8112 1.81333 10.7116 1.6 8.3213C1.92 8.52049 2.13333 8.62009 2.77333 8.52049C1.6 7.72373 0.32 7.02657 0.426667 5.03467C0.746667 5.33345 1.38667 5.53264 1.70667 5.43305C1.06667 5.23386 -0.213333 2.3456 0.853333 0.85168C2.56 2.54479 4.37333 4.23791 7.57333 4.3375C7.78667 2.24601 8.64 0.85168 10.3467 0.154515Z"
-                        fill="black" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_11534_7054">
-                        <rect width="16" height="14" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
               </a>
             </li>
           </ul>
@@ -545,7 +498,6 @@
             </svg>
           </a>
         </div>
-        <!-- </div> -->
       </footer>
     </div>
 

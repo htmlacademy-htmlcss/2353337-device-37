@@ -11,7 +11,6 @@
 
   <body>
 
-    <!-- <div class="page-container"> -->
     <!--  Хедер  -->
     <header class="main-header">
       <a class="logo-link logo-link-header" href="index.html">
@@ -340,7 +339,7 @@
           </div>
         </div>
       </section>
-      <div class="max-wide-wrapper delivery-rare-wraapper">
+      <div class="delivery-rare-wraapper">
         <section class="rare-goods">
           <a class="delivery-rare-button" href="#">
             <span class="rare-text">
@@ -368,7 +367,7 @@
           <a class="about-us-btn btn-more" href="#">Подробнее о нас</a>
         </section>
 
-        <!--  Коyтакты  -->
+        <!--  Контакты  -->
         <section class="contacts">
           <h2 class="contacts-title title-like">
             Контакты
@@ -388,7 +387,7 @@
               <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
             </div>
           </div>
-          <h3 class="contacts-subtitle">Время работы»</h3>
+          <h3 class="contacts-subtitle">Время работы</h3>
           <ul class="contacts-schedule-list">
             <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
             <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
@@ -399,7 +398,7 @@
         </section>
       </div>
       <!--  Подписка  -->
-      <div class="max-wide-wrapper">
+      <div class="subscribe-wide-wrapper">
         <section class="subscribe">
           <div class="subscribe-head-wrapper">
             <h2 class="subscribe-title title-like">
@@ -413,7 +412,7 @@
           <div class="subscribe-form-wrapper">
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="subscribe-email">E-mail.</label>
-              <input class="subscribe-email wrong-email" type="email" name="subscribe-email" id="subscribe-email"
+              <input class="subscribe-email" type="email" name="subscribe-email" id="subscribe-email"
                 placeholder="Ваш e-mail" required>
               <button class="subscribe-button" type="submit">Подписаться</button>
             </form>
@@ -424,7 +423,7 @@
     </main>
 
     <!--  Подвал  -->
-    <div class="max-wide-wrapper footer-wide-wrapper">
+    <div class="footer-wide-wrapper">
       <footer class="footer">
         <a class="logo-link-footer" href="https://htmlacademy.ru/">
           <img class="logo-image logo-image-footer" src="./images/logo-yellow.svg" width="145" height="36"
@@ -446,9 +445,9 @@
               <a class="footer-service-link" href="#">Контакты</a>
             </li>
           </ul>
-          <!-- <div class="phone-wrapper"> -->
-          <a class="footer-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
-          <!-- </div> -->
+          <div class="phone-footer-wrapper">
+            <a class="footer-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+          </div>
         </div>
         <div class="footer-bottom-wrapper">
           <ul class="social-list">
@@ -480,69 +479,79 @@
             </svg>
           </a>
         </div>
-        <!-- </div> -->
       </footer>
     </div>
 
-    <!-- </div> -->
 
     <!--  Модальное окно  -->
-    <!--
-     <div class="modal-overlay">
+    <div class="modal-overlay modal-show">
       <div class="modal modal-container">
         <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть окно заказа.</span>
         </button>
         <section class="modal-content">
-          <h2 class="modal-title">Доставка под заказ.</h2>
+          <h2 class="modal-title title-like">Доставка под заказ</h2>
           <form class="modal-form" action="https://echo.htmlacademy.ru/" name="modal-search" method="post">
-            <fieldset class="username-group">
+            <fieldset class="modal-form-field username-group">
               <label class="username-label" for="username">
                 Ваше имя:
               </label>
-              <input class="username-field" type="text" id="username" name="username" placeholder="Введите имя"
-                required>
+              <input class="username-field modal-input" type="text" id="username" name="username"
+                placeholder="Введите имя" required>
             </fieldset>
-            <fieldset class="email-group">
+            <fieldset class="modal-form-field email-group">
               <label class="email-label" for="modal-email">
                 Ваш e-mail:
               </label>
-              <input class="modal-email" type="email" id="modal-email" name="modal-email" placeholder="Введите e-mail"
-                value="почта" required>
-              <p class="wrong-email">Забавный у вас адрес.</p>
+              <input class="modal-email modal-wrong modal-input" type="email" id="modal-email" name="modal-email"
+                placeholder="Введите e-mail" value="почта" required>
+              <p class="wrong-email-text">Забавный у вас адрес.</p>
             </fieldset>
-            <fieldset class="goods-group">
+            <fieldset class="modal-form-field goods-group">
               <label class="goods-label" for="goods-order">
                 Что нужно привезти:
               </label>
-              <input class="goods-field" type="text" id="goods-order" name="goods-order" placeholder="В свободной форме"
-                required>
+              <input class="goods-field modal-input" type="text" id="goods-order" name="goods-order"
+                placeholder="В свободной форме" required>
             </fieldset>
-            <div class="value-container">
-              <fieldset class="value">
-                <legend class="visually-hidden">Количество товара, который Вы хотите заказать.
-                </legend>
+            <fieldset class="modal-form-field value">
+              <div class="value-label-wrapper">
                 <label class="value-label" for="value-goods"> Количество:
                 </label>
-                <div class="buton-container">
-                  <button class="minus-button" type="button">
-                    <span class="visually-hidden">Нажмите, чтобы уменьшить количество.</span>
-                  </button>
-                  <input class="volume-goods" type="number" name="value-goods" id="value-goods" value="1" min="1"
-                    required>
-                  <button class="plus-button" type="button">
-                    <span class="visually-hidden">Нажмите, чтобы увеличить количество.</span>
-                  </button>
-                </div>
-              </fieldset>
-              <button class="modal-button" type="submit">Отправить
-              </button>
-            </div>
+                <button class="note-btn">
+                  <span class="visually-hidden">
+                    Примечение о заказываемом количестве товаров:
+                  </span>
+                </button>
+              </div>
+              <p class="note-text">
+                Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
+                к провозу багажа.
+              </p>
+              <div class="modal-btn-container">
+                <button class="modal-contral-btn minus-btn" type="button">
+                  <span class="visually-hidden">Нажмите, чтобы уменьшить количество.</span>
+                </button>
+                <input class="volume-goods" type="number" name="value-goods" id="value-goods" value="1" min="1"
+                  required>
+                <button class="modal-contral-btn plus-btn" type="button">
+                  <span class="visually-hidden">Нажмите, чтобы увеличить количество.</span>
+                </button>
+              </div>
+            </fieldset>
+            <button class="modal-btn btn-more" type="submit">Отправить
+            </button>
           </form>
         </section>
       </div>
     </div>
- -->
+
+
+
+    <script src="./scripts/script.js"></script>
+
+
+
   </body>
 
 </html>

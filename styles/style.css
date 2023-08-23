@@ -255,7 +255,7 @@ body {
 }
 
 .user-login-item {
-  width: 265px;
+  width: 251px;
   display: flex;
   justify-content: flex-start;
 }
@@ -267,7 +267,7 @@ body {
   background-position: left 50%;
   text-align: left;
   padding-left: 27px;
-  margin-right: 28px;
+  padding-right: 27px;
 }
 
 .user-logout-button {
@@ -668,6 +668,7 @@ body {
   left: 0;
   background-color: #000000;
   position: absolute;
+  display: none;
 }
 
 .navigastion-active-link:focus {
@@ -786,7 +787,6 @@ body {
 }
 
 .btn-more {
-  background: linear-gradient(#ffe17f, #ffe17f) top 10px center/100% 8px no-repeat;
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -798,15 +798,28 @@ body {
   word-wrap: break-word;
   padding: 0 10px;
   width: 220px;
-  transition: background-position 0.4s, background-size 0.4s;
+  position: relative;
 }
 
-.btn-more:hover {
-  background-position: top;
-  background-size: 100% 40px;
+.btn-more::before {
+  content: "";
+  background: #ffe17f;
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  left: 0;
+  top: 49%;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: height 0.4s;
+
 }
 
-.btn-more:active {
+.btn-more:hover::before {
+  height: calc(100% + 10px);
+}
+
+.btn-more:active::before {
   background: #ffcc33;
 }
 
@@ -1047,7 +1060,7 @@ body {
 /*  Слайдер про сервис  */
 .services {
   min-width: 100%;
-  padding-top: 70px;
+  padding-top: 69px;
   padding-bottom: 72px;
   background-color: #f0f0f0;
   position: relative;
@@ -1109,7 +1122,7 @@ body {
   height: 100%;
   position: absolute;
   top: 0;
-  right: -7px;
+  right: -8px;
 }
 
 .for-slider-item {
@@ -1129,7 +1142,7 @@ body {
   text-transform: uppercase;
   display: block;
   text-decoration: none;
-  padding: 8px 12px;
+  padding: 8px 10px 8px 15px;
   width: 160px;
   transition: transform 0.6s;
   word-wrap: break-word;
@@ -1142,7 +1155,7 @@ body {
   height: 8px;
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 49%;
   transform: translateY(-50%);
   z-index: -1;
   transition: height 0.4s;
@@ -1150,7 +1163,7 @@ body {
 
 
 .for-slider-link:hover::before {
-  height: calc(100% + 20px);
+  height: calc(100% + 10px);
 }
 
 .for-slider-current {
@@ -1165,7 +1178,7 @@ body {
 .services-current-link:hover,
 .services-current-link:active,
 .services-current-link:focus {
-  transform: translate(25px);
+  transform: translateX(25px);
 }
 
 
@@ -1239,12 +1252,13 @@ body {
   right: 49px;
 }
 
+
 .services-slider-container {
   padding-top: 74px;
 }
 
 /*  Большая кнопка-ссылка - доставка редких  */
-.max-wide-wrapper {
+.delivery-rare-wraapper {
   min-width: 100%;
   background-color: #ffffff;
 }
@@ -1253,7 +1267,7 @@ body {
   width: 1160px;
   min-height: 100px;
   margin: 0 auto;
-  padding: 70px 0;
+  padding: 71px 0 66px;
 }
 
 .delivery-rare-button {
@@ -1346,8 +1360,8 @@ body {
 
 .about-us,
 .contacts {
-  padding-top: 47px;
-  padding-bottom: 70px;
+  padding-top: 51px;
+  padding-bottom: 76px;
 }
 
 .about-contacts-wrapper .title-like,
@@ -1365,7 +1379,7 @@ body {
   background: #000000;
   width: 84px;
   height: 7px;
-  top: -47px;
+  top: -48px;
   left: 0;
   position: absolute;
 }
@@ -1419,7 +1433,7 @@ body {
 
 .contacts-subtitle {
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   font-family: "Rubik", "Arial", sans-serif;
   font-size: 24px;
   font-style: normal;
@@ -1457,10 +1471,15 @@ body {
 }
 
 /*  Подписка  */
+.subscribe-wide-wrapper {
+  min-width: 100%;
+  background-color: #f0f0f0;
+}
+
 .subscribe {
   width: 1160px;
   margin: 0 auto;
-  padding-top: 60px;
+  padding-top: 65px;
   padding-bottom: 56px;
 }
 
@@ -1473,7 +1492,7 @@ body {
 .subscribe-title {
   width: 370px;
   margin: 0;
-  padding-left: 10px;
+  padding-left: 7px;
 }
 
 .subscribe-text {
@@ -1488,22 +1507,20 @@ body {
 }
 
 .subscribe-form {
-  width: 810px;
+  width: 812px;
   display: flex;
 }
 
 .subscribe-email {
-  width: 557px;
+  width: 560px;
   border: none;
   border-bottom: 3px solid #c4c4c4;
   padding-left: 20px;
   background: transparent;
-
 }
 
 .subscribe-email::placeholder {
   font-family: "Rubik", "Arial", sans-serif;
-  ;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -1511,10 +1528,27 @@ body {
   opacity: 0.5;
 }
 
+.subscribe .subscribe-email:focus {
+  outline: none;
+}
+
+.subscribe-email:focus {
+  background: #dcdcdc;
+}
+
+/* неправильный email */
+.wrong-email {
+  width: 560px;
+  border: none;
+  border-bottom: 3px solid #ff3d3d;
+  padding-left: 20px;
+  background: transparent;
+}
+
 .subscribe-button {
   margin: 0;
   padding: 0 20px;
-  width: 253px;
+  width: 255px;
   min-height: 57px;
   text-align: center;
   font-family: "Raleway", "Arial", sans-serif;
@@ -1525,7 +1559,26 @@ body {
   letter-spacing: 3.6px;
   text-transform: uppercase;
   border: 3px solid #c4c4c4;
-  background: transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.subscribe-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.subscribe-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.subscribe-button:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.subscribe-button:disabled {
+  opacity: 0.3;
 }
 
 .subscribe-form-wrapper .subscribe-text {
@@ -1535,34 +1588,279 @@ body {
   padding-left: 32px;
 }
 
-.subscribe .subscribe-email:focus,
-.subscribe .subscribe-button:focus {
+
+
+/* Модальное окно  */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: rgba(240, 240, 240, 0.90);
+}
+
+.modal-show {
+  /*  поменять на флекс  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 72px 80px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 0 0 rgba(0, 0, 0, 0.10);
+  border: 10px solid #000000;
+  box-sizing: border-box;
+}
+
+.modal-container {
+  width: 920px;
+}
+
+.modal-close-button {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 84px;
+  right: 80px;
+  background-color: transparent;
+}
+
+.modal button {
+  border: none;
+  cursor: pointer;
+}
+
+.modal-close-button::before,
+.modal-close-button::after {
+  content: "";
+  background-color: #000000;
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: -2px;
+}
+
+.modal-close-button::before {
+  transform: rotate(45deg);
+}
+
+.modal-close-button::after {
+  transform: rotate(-45deg);
+}
+
+.modal-close-button:hover {
+  opacity: 0.6;
+}
+
+.modal-close-button:hover {
+  opacity: 0.3;
+}
+
+.modal button:focus,
+.modal input:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 42px;
+}
+
+.modal-form {
+  display: grid;
+  grid-template-columns: 360px 140px 180px;
+  gap: 42px 40px;
+}
+
+.modal-form-field {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form-field label {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+  margin-bottom: 14px;
+}
+
+.modal-form-field input {
+  border: none;
+  background-color: #f0f0f0;
+  min-height: 60px;
+  padding: 20px;
+  position: relative;
+}
+
+.modal-form-field p {
+  margin: 0;
+}
+
+.username-group {
+  grid-column: 1/2;
+}
+
+.username-field {
+  background: url("../images/icons/user-grey.svg") center right 20px/15px 12px no-repeat;
+}
+
+.modal-input:hover {
+  background-color: #dcdcdc;
+}
+
+.modal-input:hover {
+  background-color: #ebebeb;
+}
+
+.email-group {
+  grid-column: 2/4;
+}
+
+.modal-email {
+  background: url("../images/icons/envelope.svg") center right 20px/15px 12px no-repeat;
+}
+
+.modal .modal-wrong {
+  border: 2px solid #ff3d3d;
+}
+
+.wrong-email-text {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #ff3d3d;
+  display: block;
+}
+
+.goods-group {
+  grid-column: 1/3;
+}
+
+.value {
+  grid-column: 3/4;
+  position: relative;
+}
+
+.value-label {
+  margin-right: 8px;
+}
+
+.note-btn {
+  width: 26px;
+  height: 26px;
+  border: none;
+  background: url("../images/icons/i&elipse-yellow.svg") center/26px no-repeat;
+  position: relative;
+  top: -6px;
+}
+
+.note-text {
+  margin: 0;
+  width: 200px;
+  padding: 19px 17px 19px 19px;
+  background-color: #000000;
+  box-shadow: 0 10px 0 0 rgba(0, 0, 0, 0.10);
+  position: absolute;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #ffffff;
+  z-index: 1;
+  top: 37px;
+  left: -24px;
+  display: none;
+}
+
+.note-text::before {
+  content: "";
+  background: url("../images/icons/trangale-for-modal-tooltip.svg");
+  top: -6px;
+  left: 153px;
+  width: 14px;
+  height: 8px;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.modal-btn-container {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+}
+
+.modal-contral-btn {
+  position: relative;
+  padding: 0;
+  z-index: 1;
+}
+
+.modal-contral-btn::before,
+.plus-btn::after {
+  content: "";
+  background-color: #000000;
+  width: 16px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.plus-btn::before {
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.volume-goods[type="number"] {
+  appearance: textfield;
+}
+
+.volume-goods::-webkit-outer-spin-button,
+.volume-goods::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+
+.modal-btn {
+  width: 200px;
+  background-color: transparent;
+  z-index: 0;
+}
+
+/*
+
+.modal-search-button:hover,
+.modal-search-button:focus {
+  background-color: #68a2ca;
   outline: none;
 }
 
-.subscribe-email:focus {
-  background: #dcdcdc;
+.modal-search-button:active .search-text {
+  opacity: 0.30000001192092896;
 }
 
-.subscribe-email:focus {
-  background: #dcdcdc;
-}
+*/
 
-.subscribe-button:focus + .subscribe-email {
-  background: #dcdcdc;
-  /* не работает */
-}
-
-/*  неправильный email
-.wrong-email {
-  border-color: #ff3d3d;
-}
- */
-
-.subscribe-button:active + .subscribe-email:invalid {
-  border-color: #ff3d3d;
-  /* не работает */
-}
 
 /*  Каталог - страница  */
 .header-inner {
@@ -1572,11 +1870,12 @@ body {
 
 .header-wrapper {
   width: 1080px;
-  padding: 35px 60px;
+  padding: 39px 60px 29px;
 }
 
 .catalog-title {
   margin-top: 0;
+  margin-bottom: 9px;
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 50px;
   font-style: normal;
@@ -1589,7 +1888,7 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 32px;
+  gap: 37px;
 
 }
 
@@ -1634,6 +1933,7 @@ body {
 .filter-cards-wrapper ul {
   list-style: none;
   padding-left: 0;
+  margin: 0
 }
 
 .filter-title,
@@ -1646,13 +1946,274 @@ body {
   line-height: normal;
   letter-spacing: 3.2px;
   text-transform: uppercase;
+  width: 249px;
+  margin-right: 101px;
+  padding-top: 5px;
 }
 
 .filter-title {
+  margin: 0;
   padding: 25px 0;
 }
 
-/*  Сщзтирока - Карточки товара - Пагинация  */
+/*  Фильтры  */
+.catalog-filters-form {
+  padding-top: 29px;
+  padding-right: 73px;
+}
+
+.filter-container {
+  margin-bottom: 42px;
+}
+
+.catalog-filter-group {
+  margin-bottom: 26px;
+  /* width: 200px; */
+  /* border-top: 2px solid #000000; */
+}
+
+.catalog-filter-title {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+  position: relative;
+}
+
+.cost-title {
+  margin-bottom: 26px;
+  padding-top: 20px;
+}
+
+.catalog-filter-title::before {
+  content: "";
+  background-color: #000000;
+  width: 200px;
+  height: 2px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+
+.range-scale {
+  position: relative;
+  width: 200px;
+  height: 2px;
+  margin-bottom: 6px;
+  background-color: #dcdcdc;
+}
+
+.range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: #000000;
+  width: 119px;
+  top: 0;
+  left: 0;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #ebebeb;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.range-toggle:active {
+  background: #000000;
+}
+
+.range-toggle:focus::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+  top: -2px;
+  left: -2px;
+}
+
+.toggle-min {
+  transform: translate(-50%, -50%);
+}
+
+.toggle-max {
+  transform: translate(110px, -50%);
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: flex-start;
+  gap: 35px;
+  transform: translateX(-15px);
+}
+
+.range-input {
+  width: 70px;
+  padding: 0;
+  font: inherit;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+  position: relative;
+}
+
+.range-input[placeholder] {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  opacity: 0.3;
+}
+
+/* .range-label {
+  position: absolute;
+  width: 28px;
+  height: 16px;
+  top: 1px;
+  left: 0;
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+  display: none;
+}
+
+.range-input:focus + .range-label {
+  display: block;
+} */
+
+.range-input:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+}
+
+.filter-item-color {
+  margin-bottom: 17px;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+}
+
+.control-input {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cccccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  margin-right: 16px;
+  appearance: none;
+  background-color: transparent;
+}
+
+.control-input[type="checkbox"]:checked {
+  background-image: url(../images/icons/check-marrk-black.svg);
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+  background-position: center;
+  border-color: #000000;
+}
+
+.color-title {
+  margin-bottom: 18px;
+  padding-top: 20px;
+}
+
+.control-label {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.radio-title {
+  padding-top: 23px;
+  margin-bottom: 18px;
+}
+
+.radio-title::before {
+  top: 8px;
+}
+
+.filter-item-radio:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* не работает на спане */
+.control-input:hover,
+.control-input:hover + span.control-label {
+  opacity: 0.6;
+}
+
+/* не работает на спане */
+.control-input:active,
+.control-input:active + .control-label {
+  opacity: 0.3;
+}
+
+/* наверное тоже не работает на спане */
+.control-input:disabled,
+.control-input:disabled + .control-label {
+  opacity: 0.1;
+}
+
+/* не работает */
+.control-input::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+  top: 0;
+  left: 0;
+  flex-shrink: 0;
+}
+
+.control-input[type="radio"] {
+  border-radius: 50%;
+}
+
+
+.control-input[type="radio"]:checked {
+  background-color: #000000;
+  border-color: #000000;
+  box-shadow: inset 0 0 0 4px #ffffff;
+}
+
+.button-find-show {
+  border: none;
+  background-color: transparent;
+  z-index: 0;
+}
+
+
+/*  Созтирока - Карточки товара - Пагинация  */
 .cards {
   width: 100%;
   background-color: #ffffff;
@@ -1660,7 +2221,6 @@ body {
 
 .sorting-container {
   display: flex;
-  justify-content: space-between;
   background-color: #f0f0f0;
   padding: 20px 40px;
 }
@@ -1673,12 +2233,21 @@ body {
   font-weight: 400;
   line-height: 30px;
   background-color: transparent;
+  padding-right: 7px;
 }
 
-.sorting-control-list {
+
+
+ul.sorting-control-list {
   padding: 0;
   margin: 0;
   display: flex;
+  width: 68px;
+  margin-left: auto;
+}
+
+.sorting-control-item {
+  margin-left: 18px;
 }
 
 .cards-wrapper {
@@ -1686,10 +2255,15 @@ body {
   padding: 70px 40px 0;
 }
 
+.cards-container {
+  margin-bottom: 44px;
+}
+
 .cards-list {
   display: grid;
   grid-template-columns: repeat(2, 360px);
-  gap: 40px;
+  column-gap: 40px;
+  row-gap: 44px;
   justify-content: space-evenly;
 }
 
@@ -1759,24 +2333,98 @@ body {
   color: #444444;
 }
 
+.show-more-link {
+  width: 100%;
+  min-height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid;
+  border-color: #e5e5e5;
+  text-decoration: none;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 44px;
+}
 
+.pagination-wrapper {
+  margin-bottom: 78px;
+  background-color: #ebebeb;
+}
+
+.pagination-list,
+.pagination-item {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.pagination-list {
+  display: flex;
+  align-items: center;
+  min-height: 71px;
+}
+
+.pagination-link {
+  text-decoration: none;
+  color: rgba(68, 68, 68, 0.3);
+  display: block;
+}
+
+.pagination-text {
+  min-width: 128px;
+  padding: 0 25px;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.pagination-text:first-child {
+  margin-right: auto;
+}
+
+.pagination-text:last-child {
+  margin-left: auto;
+}
+
+.pagination-number {
+  width: 40px;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
 
 
 
 /*   Подвал  */
 .footer-wide-wrapper {
+  min-width: 100%;
   background-color: #444444;
 }
 
 .footer {
   width: 1160px;
   margin: 0 auto;
-  padding: 63px 0;
+  padding: 60px 0;
   color: #ffffff;
 }
 
 .logo-link-footer {
-  margin-bottom: 35px;
+  margin-bottom: 33px;
   display: block;
   width: 145px;
 }
@@ -1803,6 +2451,7 @@ body {
   flex-wrap: wrap;
   margin-bottom: 48px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer-address {
@@ -1824,8 +2473,7 @@ body {
   width: 538px;
   display: flex;
   flex-wrap: wrap;
-  gap: 35px;
-  justify-self: center;
+  gap: 31px;
   justify-content: flex-start;
 }
 
@@ -1858,14 +2506,8 @@ body {
   opacity: 0.3;
 }
 
-.phone-wrapper {
-  width: 190px;
-  font-family: "Rubik", "Arial", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  text-decoration-line: underline;
+.phone-footer-wrapper {
+  width: 174px;
 }
 
 .footer-phone {
@@ -1877,6 +2519,7 @@ body {
   text-decoration-line: underline;
   color: #ffffff;
   text-align: end;
+  display: block;
 }
 
 .footer-bottom-wrapper {
@@ -1895,15 +2538,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* .social-wrapper {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(rgb(255, 255, 255, 0.3), rgb(255, 255, 255, 0.3)) center/40px no-repeat;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .social-item {
   width: 40px;
@@ -1923,24 +2557,18 @@ body {
 }
 
 .youtube-link {
-  background: url("../images/icons/youtube.svg3") center/16px 11px no-repeat;
+  background: url("../images/icons/youtube.svg") center/16px 11px no-repeat;
 }
 
 .twitter-link {
   background: url("../images/icons/twitter.svg") center/16px 14px no-repeat;
-
 }
 
-
-/* .youtube-link {
-  background: ;
-} */
-
-.social-link:hover .social-wrapper {
+.social-item:hover {
   background-color: #ffc700;
 }
 
-.social-link:active .social-icon path {
+.social-link:active {
   opacity: 0.3;
 }
 
@@ -1967,6 +2595,6 @@ body {
   width: 80px;
   height: 7px;
   position: absolute;
-  left: -1042px;
-  top: 15px;
+  left: -1044px;
+  top: 18px;
 }
