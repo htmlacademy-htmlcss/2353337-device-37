@@ -26,7 +26,9 @@
               <span class="visually-hidden">Введите Ваш запрос</span>
             </label>
             <button class="search-button" type="submit">
-              Найти
+              <span class="search-btn-text">
+                Найти
+              </span>
             </button>
           </form>
           <!--  Пользовательское меню  -->
@@ -35,7 +37,6 @@
               <a class="user-menu-link user-login" href="#">
                 Войти
               </a>
-
             </li>
             <li class="user-menu-item">
               <a class="user-menu-link user-compare" href="#">Сравнить
@@ -155,7 +156,15 @@
       <!--  Слайдер  -->
       <section class="slider">
         <h2 class="visually-hidden">Слайдер с кратким описанием уникальных гаджетов</h2>
-        <!-- <div class="slider-wrapper"> -->
+
+        <!--  Управление  - кнопки лево/право  -->
+        <button class="slider-control slider-left-button" type="button">
+          <span class="visually-hidden">Предыдущий слайд</span>
+        </button>
+        <button class="slider-control slider-right-button" type="button">
+          <span class="visually-hidden">Следующий слайд</span>
+        </button>
+
         <ol class="slider-list">
           <!--  Слайд 1  -->
           <li class="slider-item slider-item-active slider-item-1">
@@ -235,16 +244,7 @@
               </ul>
             </div>
           </li>
-
         </ol>
-        <!--  Управление слайдером  -->
-        <!--  Кнопки  -->
-        <button class="slider-control slider-left-button" type="button">
-          <span class="visually-hidden">Предыдущий слайд</span>
-        </button>
-        <button class="slider-control slider-right-button" type="button">
-          <span class="visually-hidden">Следующий слайд</span>
-        </button>
         <!--  Кружочки-пагинация -->
         <ol class="slider-pagination">
           <li class="slider-pagination-item">
@@ -296,10 +296,10 @@
         <div class="services-wrapper">
           <ul class="for-slider-list">
             <li class="for-slider-item for-slider-current">
-              <a class="for-slider-link services-current-link services-delivery-link" href="#">Доставка</a>
+              <a class="for-slider-link services-current-link" href="#">Доставка</a>
             </li>
             <li class="for-slider-item">
-              <a class="for-slider-link services-warranty-link" href="#">Гарантия</a>
+              <a class="for-slider-link" href="#">Гарантия</a>
             </li>
             <li class="for-slider-item">
               <a class="for-slider-link services-credit-link" href="#">Кредит</a>
@@ -341,6 +341,7 @@
       </section>
       <div class="delivery-rare-wraapper">
         <section class="rare-goods">
+          <h2 class="visually-hidden">Доставка редких товаров.</h2>
           <a class="delivery-rare-button" href="#">
             <span class="rare-text">
               Доставим редкий товар под заказ
@@ -414,7 +415,9 @@
               <label class="visually-hidden" for="subscribe-email">E-mail.</label>
               <input class="subscribe-email" type="email" name="subscribe-email" id="subscribe-email"
                 placeholder="Ваш e-mail" required>
-              <button class="subscribe-button" type="submit">Подписаться</button>
+              <button class="subscribe-button" type="submit">
+                Подписаться
+              </button>
             </form>
             <p class="subscribe-text">Это бесплатно</p>
           </div>
@@ -484,7 +487,7 @@
 
 
     <!--  Модальное окно  -->
-    <div class="modal-overlay modal-show">
+    <div class="modal-overlay">
       <div class="modal modal-container">
         <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть окно заказа.</span>
@@ -498,14 +501,18 @@
               </label>
               <input class="username-field modal-input" type="text" id="username" name="username"
                 placeholder="Введите имя" required>
+              <p class="text-under-input">Добавьте имя
+              </p>
             </fieldset>
             <fieldset class="modal-form-field email-group">
               <label class="email-label" for="modal-email">
                 Ваш e-mail:
               </label>
-              <input class="modal-email modal-wrong modal-input" type="email" id="modal-email" name="modal-email"
+              <input class="modal-email input-wrong modal-input" type="email" id="modal-email" name="modal-email"
                 placeholder="Введите e-mail" value="почта" required>
-              <p class="wrong-email-text">Забавный у вас адрес.</p>
+              <p class="text-under-input wrong-text">
+                Забавный у вас адрес
+              </p>
             </fieldset>
             <fieldset class="modal-form-field goods-group">
               <label class="goods-label" for="goods-order">
@@ -520,20 +527,20 @@
                 </label>
                 <button class="note-btn">
                   <span class="visually-hidden">
-                    Примечение о заказываемом количестве товаров:
+                    Примечение о количестве товаров в Ваш заказ:
                   </span>
                 </button>
+                <p class="note-text">
+                  Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
+                  к провозу багажа.
+                </p>
               </div>
-              <p class="note-text">
-                Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
-                к провозу багажа.
-              </p>
               <div class="modal-btn-container">
                 <button class="modal-contral-btn minus-btn" type="button">
                   <span class="visually-hidden">Нажмите, чтобы уменьшить количество.</span>
                 </button>
                 <input class="volume-goods" type="number" name="value-goods" id="value-goods" value="1" min="1"
-                  required>
+                  max="100" required>
                 <button class="modal-contral-btn plus-btn" type="button">
                   <span class="visually-hidden">Нажмите, чтобы увеличить количество.</span>
                 </button>
@@ -546,11 +553,7 @@
       </div>
     </div>
 
-
-
     <script src="./scripts/script.js"></script>
-
-
 
   </body>
 
