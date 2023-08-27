@@ -718,6 +718,10 @@ a.open-cart-button:hover {
 
 .slider-list {
   display: flex;
+  /* transform: translateX(calc(-1160px * 0));
+  transform: translateX(calc(-1160px * 1));
+  transform: translateX(calc(-1160px * 2)); */
+  transition: transform 1s;
 }
 
 .slider-list,
