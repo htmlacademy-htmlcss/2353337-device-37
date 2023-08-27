@@ -63,8 +63,7 @@ body {
   width: 1160px;
   margin: 0 auto;
   background-color: #ffe17f;
-  padding-top: 86px;
-  padding-bottom: 18px;
+  padding-top: 96px;
   position: relative;
 }
 
@@ -72,7 +71,7 @@ body {
   content: "";
   background-color: #ffffff;
   width: 1160px;
-  height: 40px;
+  height: 50px;
   position: absolute;
   left: 0;
   top: 0;
@@ -87,7 +86,7 @@ body {
   display: block;
   z-index: 1;
   position: absolute;
-  top: 21px;
+  top: 29px;
   left: 60px;
 }
 
@@ -711,9 +710,14 @@ a.open-cart-button:hover {
   width: 1160px;
   position: relative;
   margin: 0 auto;
-  padding-top: 85px;
+  padding-top: 103px;
   top: 0;
   padding-bottom: 19px;
+  overflow: hidden;
+}
+
+.slider-list {
+  display: flex;
 }
 
 .slider-list,
@@ -727,11 +731,18 @@ a.open-cart-button:hover {
   content: "";
   background: #ffe17f;
   width: 1160px;
-  height: 114px;
+  height: 133px;
   position: absolute;
   left: 0;
   top: 0;
   z-index: -2;
+}
+
+.slider-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
 }
 
 .slider-number {
@@ -741,14 +752,8 @@ a.open-cart-button:hover {
   line-height: 30px;
   color: #ffffff;
   position: absolute;
-  top: 46px;
-  right: 48px;
-}
-
-.slider-item-active {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  top: -39px;
+  right: 49px;
 }
 
 .slider-item > div {
@@ -775,7 +780,8 @@ a.open-cart-button:hover {
 }
 
 .slider-slogan {
-  margin-bottom: 30px;
+  margin-bottom: 29px;
+  padding-top: 1px;
 }
 
 .slider-text {
@@ -838,13 +844,13 @@ a.open-cart-button:hover {
   width: 560px;
 }
 
-.slider-item-2 {
+/* .slider-item-2 {
   display: none;
 }
 
 .slider-item-3 {
   display: none;
-}
+} */
 
 .slider-item-3 .slider-property-list {
   gap: 40px;
@@ -869,23 +875,28 @@ a.open-cart-button:hover {
   margin-bottom: 11px;
 }
 
-.slider-left-button {
+.slider-control {
   background: transparent;
   border: none;
   width: 20px;
   height: 60px;
   position: absolute;
-  top: 175px;
+  top: 194px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.slider-left-button {
   left: 30px;
 }
 
 .slider-right-button {
-  background: transparent;
+  /* background: transparent;
   border: none;
   width: 20px;
   height: 60px;
   position: absolute;
-  top: 175px;
+  top: 175px; */
   left: 540px;
 }
 
@@ -943,6 +954,7 @@ a.open-cart-button:hover {
   border-radius: 50%;
   border: 2px solid #000000;
   position: relative;
+  cursor: pointer;
 }
 
 .slider-pagination-item button.slider-pagination-current {
@@ -1021,7 +1033,7 @@ a.open-cart-button:hover {
   position: absolute;
   height: 160px;
   width: 160px;
-  top: 0;
+  top: -1px;
   left: 0;
   z-index: -1;
 }
@@ -1067,7 +1079,7 @@ a.open-cart-button:hover {
 /*  Слайдер про сервис  */
 .services {
   min-width: 100%;
-  padding-top: 69px;
+  padding-top: 68px;
   padding-bottom: 72px;
   background-color: #f0f0f0;
   position: relative;
@@ -2762,6 +2774,8 @@ pagination-number-current
   opacity: 0.3;
 }
 
+
+
 .footer-bottom-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -2778,6 +2792,7 @@ pagination-number-current
   gap: 15px;
   flex-wrap: wrap;
 }
+
 
 .social-item {
   width: 40px;
