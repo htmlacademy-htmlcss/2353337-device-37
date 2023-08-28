@@ -1153,7 +1153,7 @@ a.open-cart-button:hover {
   min-height: 40px;
 }
 
-.for-slider-link {
+.for-slider-btn {
   position: relative;
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 18px;
@@ -1162,15 +1162,18 @@ a.open-cart-button:hover {
   line-height: normal;
   letter-spacing: 3.6px;
   text-transform: uppercase;
-  display: block;
-  text-decoration: none;
+  /* display: block; */
+  /* text-decoration: none; */
   padding: 8px 10px 8px 15px;
   width: 160px;
   transition: transform 0.4s;
   word-wrap: break-word;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-.for-slider-link:not(.services-current-link):before {
+.for-slider-btn::before {
   content: "";
   background: #ffe17f;
   width: 100%;
@@ -1183,22 +1186,28 @@ a.open-cart-button:hover {
   transition: height 0.4s;
 }
 
-.for-slider-link:hover::before {
+.for-slider-btn:hover::before {
   height: calc(100% + 10px);
+  /* height: 100%; */
 }
 
 .for-slider-current {
   background: #000000;
 }
 
-.for-slider-current .services-current-link {
+.for-slider-current .for-slider-btn {
   color: #ffe17f;
+  transition: transform 0.4s;
 }
 
-.services-current-link:hover,
-.services-current-link:active,
-.services-current-link:focus-visible {
-  transform: translateX(25px);
+.for-slider-current .for-slider-btn:hover,
+.for-slider-current .for-slider-btn:active {
+  background-color: #000000;
+  transform: translateX(26px);
+}
+
+.for-slider-current .for-slider-btn::before {
+  display: none;
 }
 
 .services-slider-description {
